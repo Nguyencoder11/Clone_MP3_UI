@@ -13,9 +13,9 @@ html {
 
 html,
 body {
-    font-size: 1.4rem;
-    line-height: 1.4;
-    font-family: ;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: Inter, sans-serif;
     font-weight: 500;
     color: #fff;
     /* background-color: ; */
@@ -27,3 +27,113 @@ body {
     overflow: hidden;
 }
 
+.main-layout,
+#left-sidebar {
+    height: calc(100vh - 90px);
+}
+
+.main-layout {
+    display: flex;
+    width: 100%;
+    min-width: 768px;
+    background-color: var(--layout-bg);
+}
+
+
+/* Left sidebar */
+#left-sidebar {
+    position: relative;
+    z-index: 100;
+    width: 240px;
+    background-color: var(--sidebar-bg);
+    padding-top: 70px;
+    padding-bottom: 54px;
+}
+
+.sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar-branch {
+    width: 240px;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    padding: 0 25px 0 28px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-button {
+    border-radius: 0;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    text-transform: none;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.btn-button .logo {
+    width: 120px;
+    height: 40px;
+    display: inline-block;
+    background: var(--img-logo-mp3) 50%/contain no-repeat;
+
+}
+
+.navbar-main {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.navbar-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar-items {
+    font-weight: 700;
+    color: var(--navigation-text);
+    border-left: 3px solid transparent;
+}
+
+.navbar-items.navbar-items-active {
+    color: var(--text-item-hover);
+    background-color: var(--alpha-bg);
+    border-color: var(--purple-primary);
+}
+
+.navbar-items a {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    padding: 12px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+}
+
+.navbar-items a>svg {
+    margin-right: 12px;
+}
+
+.navbar-items span {
+    white-space: nowrap;
+    line-height: normal;    
+}
