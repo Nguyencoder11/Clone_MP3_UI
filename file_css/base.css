@@ -1,0 +1,19 @@
+:root {
+    --layout-bg: #170f23;
+    --layout-header-bg: rgba(23, 15, 35, 0.8);
+    --player-bg: #130c1c;
+    --sidebar-popup-bg: #2a213a;
+    --primary-bg: #34224f;
+    --gradient-latest-section-artist: linear-gradient(286.07deg, rgba(23, 15, 35, 0.95) 55.21%, rgba(23, 15, 35, 0.6));
+    --alpha-layout-bg: rgba(41, 21, 71, 0.8);
+    --queue-player-popup-bg: #120822;
+    --blur-queue-bg: rgba(30, 21, 47, 0.9019607843137255);
+    --purple-primary: #9b4de0;
+    --link-text-hover: #c273ed;
+    --chart-bg-img-alpha: rgba(32, 19, 53, 0.9);
+    --text-placeholder: #dadada;
+    --navigation-text: #dadada;
+    --sticky-header-box-shadow: rgba(0,0,0,0.1);
+    --portal-menu-box-shadow: rgba(0,0,0,0.2);
+}
+
