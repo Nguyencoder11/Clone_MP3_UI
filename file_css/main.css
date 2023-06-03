@@ -135,5 +135,61 @@ body {
 
 .navbar-items span {
     white-space: nowrap;
-    line-height: normal;    
+    line-height: normal;
+}
+
+.auto-player__area {
+    background-color: #6f3589db;
+    height: auto;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    z-index: 3;
+}
+
+.music-information {
+    display: flex;
+    align-items: center;
+    width: 25%;
+}
+
+.music-image {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin: 10px;
+}
+
+.music-describe p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.music-describe span {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+
+
+
+.audio-controls {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.special-functions {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
