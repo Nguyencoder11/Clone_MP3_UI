@@ -1,5 +1,4 @@
 var progress = document.querySelector("#progress");
-var song = document.querySelector("#song");
 var playSong = document.querySelector(".zm-play");
 var pauseSong = document.querySelector(".zm-pause");
 
@@ -13,7 +12,8 @@ var artist = document.querySelector("#artist");
 var start = document.querySelector("#start");
 var end = document.querySelector("#end");
 
-song.src = songs[index].link;
+var song = document.querySelector("#song");
+song.src = songs[index].src;
 title.innerHTML = songs[index].name;
 artist.innerHTML = songs[index].artists;
 thumb.src = songs[index].image;
@@ -46,6 +46,8 @@ song.onloadedmetadata = function () {
         start.innerHTML = curMin + ":" + curSec;
     }, 1000);
 };
+
+
 
 
 // Xu li su kien kich vao button play
@@ -88,13 +90,13 @@ function nextPlay() {
     index = index + 1;
     if (index > songs.length) {
         index = 0;
-        song.src = songs[index].link;
+        song.src = songs[index].src;
         title.innerHTML = songs[index].name;
         artist.innerHTML = songs[index].artists;
         thumb.src = songs[index].image;
     }
     else {
-        song.src = songs[index].link;
+        song.src = songs[index].src;
         title.innerHTML = songs[index].name;
         artist.innerHTML = songs[index].artists;
         thumb.src = songs[index].image;
@@ -107,12 +109,12 @@ function prevPlay() {
     index = index - 1;
     if (index < 0) {
         index = songs.length;
-        song.src = songs[index].link;
+        song.src = songs[index].src;
         title.innerHTML = songs[index].name;
         artist.innerHTML = songs[index].artists;
         thumb.src = songs[index].image;
     } else {
-        song.src = songs[index].link;
+        song.src = songs[index].src;
         title.innerHTML = songs[index].name;
         artist.innerHTML = songs[index].artists;
         thumb.src = songs[index].image;
@@ -125,7 +127,7 @@ function prevPlay() {
 // Xu li su kien phat ngau nhien bai hat
 function shufflePlay() {
     index = Math.floor(Math.random() * songs.length);
-    song.src = songs[index].link;
+    song.src = songs[index].src;
     title.innerHTML = songs[index].name;
     artist.innerHTML = songs[index].artists;
     thumb.src = songs[index].image;
@@ -155,9 +157,53 @@ volumeSlider.addEventListener("input", function () {
 
 // Cap nhat hien thi tien do bai hat
 var audio = new Howl({
-    src: songs[index].link,
+    src: songs[index].src,
     onplay: function () {
         var songDuration = audio.duration();
         progress.max = songDuration;
     }
+});
+
+
+
+
+var volumeMuted = document.querySelector(".volume-muted");
+var volumeDefault = document.querySelector(".volume-default");
+var volBtn = document.querySelector("#adjustVolume");
+
+volBtn.addEventListener("click", function () {
+    if (volumeDefault.style.display == "block") {
+        volumeDefault.style.display = "none";
+        volumeMuted.style.display = "block";
+        volumeSlider.value = "0";
+        song.muted = true;
+    } else {
+        volumeDefault.style.display = "block";
+        volumeMuted.style.display = "none";
+        volumeSlider.value = "default";
+        song.muted = false;
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Xu ly thanh tim kiem 
+var searchInput = document.querySelector(".search-container")
+var historyBox = document.querySelector(".suggest__list");
+searchInput.addEventListener("click", function () {
+    searchInput.classList.add("is-collapse");
+    historyBox.style.display = "block";
 });
