@@ -207,3 +207,39 @@ searchInput.addEventListener("click", function () {
     searchInput.classList.add("is-collapse");
     historyBox.style.display = "block";
 });
+
+
+
+
+
+
+
+
+
+
+
+
+// Lấy danh sách các thẻ gallery-item
+var galleryItems = document.querySelectorAll('.gallery-item');
+
+// Lấy tổng số thẻ trong danh sách
+var totalItems = galleryItems.length;
+
+// Hàm chuyển đổi class của các thẻ
+function rotateGalleryItems() {
+    // Lấy tên class của thẻ cuối cùng
+    var lastItemClass = galleryItems[totalItems - 1].classList.item(1);
+
+    // Di chuyển class của các thẻ về phía trước
+    for (var i = totalItems - 1; i > 0; i--) {
+        var currentItemClass = galleryItems[i].classList.item(1);
+        var previousItemClass = galleryItems[i - 1].classList.item(1);
+        galleryItems[i].classList.replace(currentItemClass, previousItemClass);
+    }
+
+    // Di chuyển class của thẻ đầu tiên về cuối danh sách
+    galleryItems[0].classList.replace(galleryItems[0].classList.item(1), lastItemClass);
+}
+
+// Đặt thời gian chuyển đổi giữa các slide
+var interval = setInterval(rotateGalleryItems, 3000);
