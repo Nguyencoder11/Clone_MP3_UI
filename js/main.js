@@ -195,11 +195,6 @@ volBtn.addEventListener("click", function () {
 
 
 
-
-
-
-
-
 // Xu ly thanh tim kiem 
 var searchInput = document.querySelector(".search-container")
 var historyBox = document.querySelector(".suggest__list");
@@ -217,16 +212,26 @@ searchInput.addEventListener("click", function () {
 
 
 
-
-
 // Lấy danh sách các thẻ gallery-item
 var galleryItems = document.querySelectorAll('.gallery-item');
+// Lấy các button của slider
+var prevButton = document.querySelector('.zm-carousel-control-prev');
+var nextButton = document.querySelector('.zm-carousel-control-next');
+var isClicked = false;
+var isAutoRunning = true;
+
+// Đặt thời gian chuyển đổi giữa các slide
+var interval;
 
 // Lấy tổng số thẻ trong danh sách
 var totalItems = galleryItems.length;
 
 // Hàm chuyển đổi class của các thẻ
 function rotateGalleryItems() {
+    if (isClicked) {
+        return;
+    }
+
     // Lấy tên class của thẻ cuối cùng
     var lastItemClass = galleryItems[totalItems - 1].classList.item(1);
 
@@ -240,6 +245,100 @@ function rotateGalleryItems() {
     // Di chuyển class của thẻ đầu tiên về cuối danh sách
     galleryItems[0].classList.replace(galleryItems[0].classList.item(1), lastItemClass);
 }
+interval = setInterval(rotateGalleryItems, 5000);
 
-// Đặt thời gian chuyển đổi giữa các slide
-var interval = setInterval(rotateGalleryItems, 3000);
+// Hàm bắt đầu chạy slider tự động
+function startAutoRun() {
+    if (!isAutoRunning) {
+        interval = setInterval(rotateGalleryItems, 5000);
+        isAutoRunning = true;
+    }
+}
+
+// Hàm dừng chạy slider tự động
+function stopAutoRun() {
+    if (isAutoRunning) {
+        clearInterval(interval);
+        isAutoRunning = false;
+    }
+}
+
+// Gọi hàm bắt đầu chạy slider tự động ban đầu
+startAutoRun();
+
+// Hàm chuyển đổi các lớp của các phần tử gallery từ phải sang trái
+function clickToRotateBack(direction) {
+    isClicked = true;
+
+    // Lấy class của phần tử đầu tiên và xóa nó
+    var firstItemClass = galleryItems[0].classList[1];
+    galleryItems[0].classList.remove(firstItemClass);
+
+    // Thêm class mới vào phần tử cuối cùng dựa trên class của phần tử đầu tiên
+    var lastItem = galleryItems[galleryItems.length - 1];
+    lastItem.classList.add(firstItemClass);
+
+    // Dịch chuyển các lớp của các phần tử gallery theo hướng chỉ định
+    for (var i = galleryItems.length - 1; i > 0; i--) {
+        var currentItem = galleryItems[i];
+        var previousItem = galleryItems[i - 1];
+        var currentClass = currentItem.classList[1];
+        currentItem.classList.remove(currentClass);
+        previousItem.classList.add(currentClass);
+    }
+
+    // Cập nhật lại danh sách galleryItems
+    galleryItems = document.querySelectorAll('.gallery-item');
+
+    // Kết thúc sự kiện click
+    isClicked = false;
+
+    // Bắt đầu chạy slider tự động sau khi kết thúc click
+    startAutoRun();
+}
+
+// Hàm chuyển đổi các lớp của các phần tử gallery từ trái sang phải
+function clickToRotateForward(direction) {
+    isClicked = true;
+
+    // Lấy class của phần tử cuối cùng và xóa nó
+    var lastItemClass = galleryItems[galleryItems.length - 1].classList[1];
+    galleryItems[galleryItems.length - 1].classList.remove(lastItemClass);
+
+    // Thêm class mới vào phần tử đầu tiên dựa trên class của phần tử cuối cùng
+    var firstItem = galleryItems[0];
+    firstItem.classList.add(lastItemClass);
+
+    // Dịch chuyển các lớp của các phần tử gallery theo hướng chỉ định
+    for (var i = 0; i < galleryItems.length - 1; i++) {
+        var currentItem = galleryItems[i];
+        var nextItem = galleryItems[i + 1];
+        var currentClass = currentItem.classList[1];
+        currentItem.classList.remove(currentClass);
+        nextItem.classList.add(currentClass);
+    }
+
+    // Cập nhật lại danh sách galleryItems
+    galleryItems = document.querySelectorAll('.gallery-item');
+
+    // Kết thúc sự kiện click
+    isClicked = false;
+
+    // Bắt đầu chạy slider tự động sau khi kết thúc click
+    startAutoRun();
+}
+
+// Xử lý sự kiện khi nhấp vào nút "Prev"
+prevButton.addEventListener('click', function () {
+    stopAutoRun();  // Dừng chạy slider tự động khi có sự kiện click
+    clickToRotateBack('prev');
+});
+
+// Xử lý sự kiện khi nhấp vào nút "Next"
+nextButton.addEventListener('click', function () {
+    stopAutoRun();   // Dừng chạy slider tự động khi có sự kiện click
+    clickToRotateForward('next');
+});
+
+
+
