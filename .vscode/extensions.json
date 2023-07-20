@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "adpyke.codesnap",
-        "huibizhang.codesnap-plus"
+        "huibizhang.codesnap-plus",
+        "redhat.vscode-community-server-connector"
     ]
 }

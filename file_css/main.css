@@ -249,10 +249,6 @@ body {
     font-weight: 600;
 }
 
-.mar-t-15 {
-    margin-top: 15px !important;
-}
-
 .login-nav-container .text {
     font-size: 12px;
     margin-bottom: 10px;
@@ -857,8 +853,181 @@ main.zm-section>.container {
 }
 
 
+h1.title,
+h3.title {
+    font-size: 18px;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.title.is-2 {
+    font-size: 20px;
+}
+
+.zm-section-title.title {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.zm-section .discovery-btn {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+}
+
+.zm-section .discovery-btn:hover {
+    color: var(--link-text-hover);
+}
+
+.title .icon.ic-go-right {
+    position: relative;
+    top: 2px;
+    font-size: 18px;
+    color: inherit;
+}
+
+.zm-section .discovery-btn .icon {
+    font-size: 14px;
+    top: 0;
+    margin-left: 6px;
+}
+
+.zm-carousel,
+.zm-carousel-wrapper {
+    position: relative;
+}
+
+.zm-carousel {
+    display: flex;
+    margin: 0 -15px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+}
+
+.zm-carousel__container {
+    display: flex;
+    z-index: 3;
+    width: 100%;
+}
+
+.zm-carousel-item {
+    position: relative;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.zm-carousel-item,
+.zm-carousel-animation-active {
+    transition: transform .3s ease .1s;
+}
+
+.zm-carousel-item .zm-card {
+    width: 100%;
+}
+
+.playist-wrapper .zm-card-content {
+    margin-top: 12px;
+}
+
+.playist-wrapper .zm-card-content .title {
+    text-transform: none;
+}
+
+.zm-card-content .title a {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-weight: 500;
+    text-align: left;
+    text-transform: capitalize;
+    margin: 8px 0 4px;
+}
+
+.playist-wrapper .zm-card-content .title a {
+    text-transform: none;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.zm-home-recent .playist-wrapper .zm-card-content .title a {
+    margin-bottom: 0;
+}
+
+.zm-new-release-section {
+    position: relative;
+    margin-bottom: -10px;
+}
+
+.zm-new-release-section .discovery-btn {
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+
+.zm-new-release-section .genre-select {
+    margin-bottom: 16px;
+}
+
+.zm-new-release-section .genre-select .nav-btn {
+    padding: 4px 24px;
+    border: 1px solid var(--border-primary);
+    border-radius: 100px;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+
+.zm-new-release-section .genre-select .nav-btn.active {
+    border-color: var(--purple-primary);
+    background-color: var(--purple-primary);
+    color: var(--white);
+}
+
+.zm-new-release-section .columns {
+    height: 321px;
+}
+
+.zm-new-release-section .columns {
+    min-height: 190px;
+}
 
 
+
+
+
+
+
+
+
+
+
+
+
+.rt-chart-home {
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 48px;
+}
+
+.week-chart-section {
+    margin-top: 28px;
+    margin-bottom: -30px;
+}
 
 
 
@@ -880,30 +1049,6 @@ main.zm-section>.container {
     z-index: 99;
     width: calc(100% - 570px);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* --------------------------------------------- Phan nghe nhac ------------------------------------------- */

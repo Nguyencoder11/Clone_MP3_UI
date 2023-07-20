@@ -1,0 +1,5 @@
+@media screen and (min-width: 2130px) {
+    .zm-mainpage .zm-section>.container {
+        width: 1442px;
+    }
+}

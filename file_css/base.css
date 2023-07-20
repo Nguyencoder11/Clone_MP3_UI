@@ -14,7 +14,7 @@
     --queue-player-popup-bg: #120822;
     --blur-queue-bg: rgba(30, 21, 47, 0.9019607843137255);
     --purple-primary: #9b4de0;
-    --link-text-hover: #c273ed;
+    --link-text-hover: #429eff;
     --chart-bg-img-alpha: rgba(32, 19, 53, 0.9);
     --search-text: #eeeeeec0;
     --text-placeholder: #dadada;
@@ -100,6 +100,8 @@ main.zm-section::-webkit-scrollbar,
     cursor: none;
 }
 
+.is-6 {}
+
 .is-38x38 {
     width: 38px;
     height: 38px;
@@ -107,14 +109,35 @@ main.zm-section::-webkit-scrollbar,
 
 .is-48x48 {}
 
+
 .is-50x50 {
     width: 50px;
     height: 50px;
 }
 
+.is-60x60 {}
+
 .is-rounded {
     overflow: hidden;
     border-radius: 999px !important;
+}
+
+.column {
+    display: block;
+    flex-shrink: 1;
+    padding: 0 15px;
+}
+
+.mar-b-0 {
+    margin-bottom: 0 !important;
+}
+
+.mar-b-5 {
+    margin-bottom: 5px !important;
+}
+
+.mar-t-15 {
+    margin-top: 15px !important;
 }
 
 .mar-b-30 {
@@ -130,8 +153,120 @@ main.zm-section::-webkit-scrollbar,
     justify-content: center;
 }
 
-.mar-b-5 {
-    margin-bottom: 5px !important;
+.is-desktop-1,
+.is-desktop-1\.0,
+.is-desktop-1\.1,
+.is-desktop-1\.4,
+.is-desktop-2,
+.is-desktop-3,
+.is-desktop-4,
+.is-desktop-5,
+.is-desktop-6,
+.is-desktop-7,
+.is-desktop-8,
+.is-desktop-9,
+.is-desktop-10,
+.is-desktop-11,
+.is-desktop-12,
+.is-desktop-12-5,
+.is-desktop-20,
+.is-desktop-40,
+.is-desktop-60,
+.is-desktop-80,
+.is-fullhd-1,
+.is-fullhd-1\.0,
+.is-fullhd-1\.1,
+.is-fullhd-1\.4,
+.is-fullhd-2,
+.is-fullhd-3,
+.is-fullhd-4,
+.is-fullhd-5,
+.is-fullhd-6,
+.is-fullhd-7,
+.is-fullhd-8,
+.is-fullhd-9,
+.is-fullhd-10,
+.is-fullhd-11,
+.is-fullhd-12,
+.is-fullhd-12-5,
+.is-fullhd-20,
+.is-fullhd-40,
+.is-fullhd-60,
+.is-fullhd-80,
+.is-tablet-1,
+.is-tablet-1\.0,
+.is-tablet-1\.1,
+.is-tablet-1\.4,
+.is-tablet-2,
+.is-tablet-3,
+.is-tablet-4,
+.is-tablet-5,
+.is-tablet-6,
+.is-tablet-7,
+.is-tablet-8,
+.is-tablet-9,
+.is-tablet-10,
+.is-tablet-11,
+.is-tablet-12,
+.is-tablet-12-5,
+.is-tablet-20,
+.is-tablet-40,
+.is-tablet-60,
+.is-tablet-80,
+.is-touch-1,
+.is-touch-1\.0,
+.is-touch-1\.1,
+.is-touch-1\.4,
+.is-touch-2,
+.is-touch-3,
+.is-touch-4,
+.is-touch-5,
+.is-touch-6,
+.is-touch-7,
+.is-touch-8,
+.is-touch-9,
+.is-touch-10,
+.is-touch-11,
+.is-touch-12,
+.is-touch-12-5,
+.is-touch-20,
+.is-touch-40,
+.is-touch-60,
+.is-touch-80,
+.is-widescreen-1,
+.is-widescreen-1\.0,
+.is-widescreen-1\.1,
+.is-widescreen-1\.4,
+.is-widescreen-2,
+.is-widescreen-3,
+.is-widescreen-4,
+.is-widescreen-5,
+.is-widescreen-6,
+.is-widescreen-7,
+.is-widescreen-8,
+.is-widescreen-9,
+.is-widescreen-10,
+.is-widescreen-11,
+.is-widescreen-12,
+.is-widescreen-12-5,
+.is-widescreen-20,
+.is-widescreen-40,
+.is-widescreen-60,
+.is-widescreen-80 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 14px;
+    padding-right: 14px;
+    float: left;
+    flex-shrink: 0;
+}
+
+.is-fullhd-1\.4 {
+    width: 14.28571%;
+}
+
+.is-fullhd-4 {
+    width: 33.33333%;
 }
 
 .add-padding {
@@ -232,4 +367,12 @@ main.zm-section::-webkit-scrollbar,
     background-color: hsla(0, 0%, 100%, .1);
     padding: 6px 3.5px;
     border-radius: 50%;
+}
+
+.channel-section {
+    margin-top: 48px;
+}
+
+.pad-0 {
+    padding: 0 !important;
 }
