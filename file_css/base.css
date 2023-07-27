@@ -344,7 +344,7 @@ main.zm-section::-webkit-scrollbar,
     padding: 3px 6px;
     border-radius: 5px;
     position: absolute;
-    top: -32px;
+    top: -25px;
     display: none;
     line-height: 12px;
     width: 50px;
@@ -545,4 +545,13 @@ main.zm-section::-webkit-scrollbar,
 
 .zm-actions .zm-tooltip-btn:hover {
     background-color: var(--hover-tooltip-opacity);
+}
+
+.media .subtitle .indicator {
+    margin-right: 5px;
+    font-size: 10px;
+}
+
+.media .subtitle .indicator:first-child {
+    margin-left: 2px;
 }
