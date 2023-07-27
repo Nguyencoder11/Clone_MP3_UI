@@ -547,11 +547,31 @@ main.zm-section::-webkit-scrollbar,
     background-color: var(--hover-tooltip-opacity);
 }
 
+.media-item .media-right .is-hover-circle:hover {
+    background-color: var(--alpha-bg);
+    border-radius: 50%;
+}
+
 .media .subtitle .indicator {
     margin-right: 5px;
-    font-size: 10px;
+    font-size: 6px;
 }
 
 .media .subtitle .indicator:first-child {
     margin-left: 2px;
+}
+
+.ic-explicit {
+    border: 1px solid hsla(0, 0%, 100%, 0.3);
+    border-radius: 3px;
+    padding: 1px 2px;
+}
+
+.card-info h3[id="circle-e"] {
+    display: flex;
+    align-items: center;
+}
+
+.list-item.is-vip {
+    color: hsla(0, 0%, 100%, 0.5);
 }
