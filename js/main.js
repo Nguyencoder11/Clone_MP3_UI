@@ -215,8 +215,8 @@ searchInput.addEventListener("click", function () {
 // Lấy danh sách các thẻ gallery-item
 var galleryItems = document.querySelectorAll('.gallery-item');
 // Lấy các button của slider
-var prevButton = document.querySelector('.zm-carousel-control-prev');
-var nextButton = document.querySelector('.zm-carousel-control-next');
+var prevButton = document.querySelector('.zm-carousel-control-prev.control-prev');
+var nextButton = document.querySelector('.zm-carousel-control-next.control-next');
 var isClicked = false;
 var isAutoRunning = true;
 
@@ -341,4 +341,23 @@ nextButton.addEventListener('click', function () {
 });
 
 
+// Xu ly thanh cuon man hinh
 
+
+
+
+// Xu li section Mới Phát Hành
+function openMusicList(evt, musicType) {
+    var tabcontent = document.getElementsByClassName("tabcontent");
+    for (var i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    var tablinks = document.getElementsByClassName("tablinks");
+    for (var i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(musicType).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();

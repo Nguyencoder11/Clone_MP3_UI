@@ -3,3 +3,13 @@
         width: 1442px;
     }
 }
+
+
+
+
+@media screen and (min-width: 1224px) {
+    .zm-partner-section .columns .column {
+        padding: 0 10px;
+        width: 12.5%;
+    }
+}

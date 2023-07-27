@@ -2,6 +2,31 @@
     "recommendations": [
         "adpyke.codesnap",
         "huibizhang.codesnap-plus",
-        "redhat.vscode-community-server-connector"
+        "redhat.vscode-community-server-connector",
+        "dart-code.flutter",
+        "msjsdiag.vscode-react-native",
+        "dsznajder.es7-react-js-snippets",
+        "burkeholland.simple-react-snippets",
+        "1yib.nodejs-bundle",
+        "piyushvscode.nodejs-snippets",
+        "abdoseadaa.node-js-snippet",
+        "aldijav.golangwithdidi",
+        "golang.go",
+        "mongodb.mongodb-vscode",
+        "pranaygp.vscode-css-peek",
+        "ms-vscode.vscode-node-azure-pack",
+        "ms-azuretools.vscode-azureappservice",
+        "ms-azuretools.vscode-cosmosdb",
+        "ms-azuretools.vscode-azurestorage",
+        "ms-azuretools.vscode-azureresourcegroups",
+        "ms-vscode.azure-account",
+        "ms-toolsai.vscode-ai",
+        "ms-toolsai.vscode-ai-remote",
+        "ms-vscode.azurecli",
+        "ms-azuretools.vscode-azurefunctions",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        "wayou.vscode-todo-highlight",
+        "eamodio.gitlens"
     ]
 }
